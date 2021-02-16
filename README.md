@@ -4,10 +4,10 @@ Sistema para Gerenciamento de Banco de Sangue. Nele é possível criar tarefas, 
 
 ## Equipe
 
-Membro        | Papel                  | E-mail                       | Github         |
-------------- | ---------------------- | ---------------------------- | -------------- |
-              | Analista, Dev e Tester |                              |                |
-Wanessa Silva | Analista, Dev e Tester | wanessaparelhas68@gmail.com  | wanessabezerra |
+Membro | Papel | E-mail | Github |
+| ----------- | ----------- | ----------- | ----------- |
+              | Analista, Dev e Tester |                             |                |
+Wanessa Silva | Analista, Dev e Tester | wanessaparelhas68@gmail.com | wanessabezerra |
 
 ## Perfis dos Usuários
 
