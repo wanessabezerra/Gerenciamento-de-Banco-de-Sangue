@@ -18,5 +18,3 @@ Ator/Perfil                                 | Descrição   |
 Administrador | Este usuário realiza os cadastros base e pode realizar qualquer função.
 Gerente | Este usuário pode criar projetos, cadastrar uma equipe, cadastrar e gerenciar tarefas da equipe. Pode ver relatórios das tarefas e da equipe.
 Usuário Membro | Este usuário pode cadastrar suas tarefas, executá-las, e ver relatórios sobre suas tarefas.
-
-
