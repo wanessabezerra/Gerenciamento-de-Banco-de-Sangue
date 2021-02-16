@@ -4,10 +4,13 @@ Sistema para Gerenciamento de Banco de Sangue. Nele é possível criar tarefas, 
 
 ## Equipe
 
-Membro   |   Papel   |   E-mail   |   Github |
-| --- | --- | --- | --- |
-              | Analista, Dev e Tester |                             |                |
-              | Analista, Dev e Tester |                             |                |
- Wanessa Silva  |  Analista, Dev e Tester  |  wanessaparelhas68@gmail.com  |  wanessabezerra  |
+Membro | Papel | E-mail | Github |
+| --------- | --------- | --------- | --------- |
+        | Analista, Dev e Tester |                             |                |
+    Wanessa da Silva Bezerra | Analista, Dev e Tester | wanessaparelhas68@gmail.com | wanessabezerra |
+## Links
 
-* [Requisitos] <https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/52a2fb7cebc539e09cfbda1052f355088057c70a/docs/REQUISITOS.md>
+* [Requisitos](<docs\REQUISITOS.md>)
+* [Modelo de Entidade e Relacionamento](<docs\MODELO_ER.md>)
+* [Modelo Relacional](<docs\MODELO_R.md>)
+* [Dicionário de Dados](<docs\DICIONARIO_DADOS.md>)
