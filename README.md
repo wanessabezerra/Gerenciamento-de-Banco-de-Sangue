@@ -8,6 +8,7 @@ Membro | Papel | E-mail | Github |
 | --------- | --------- | --------- | --------- |
         | Analista, Dev e Tester |                             |                |
     Wanessa da Silva Bezerra | Analista, Dev e Tester | wanessaparelhas68@gmail.com | wanessabezerra |
+
 ## Links
 
 * [Requisitos](<https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/52a2fb7cebc539e09cfbda1052f355088057c70a/docs/REQUISITOS.md>)
