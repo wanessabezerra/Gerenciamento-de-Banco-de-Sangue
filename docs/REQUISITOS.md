@@ -2,17 +2,17 @@
 
 Requisito                    | Descrição   | Ator       |
 ---------                    | ----------- | ---------- |
-RF001 - Cadatrar Usuário     | Um usuário pode se auto-cadastrar ou ser cadastrado. Um usuário tem código, nome, e-mail, github, senha | Administrador, Gerente, Usuário |
-RF002 - Alterar Usuário     | Um usuário pode alterar seus dados. | Administrador, Gerente, Usuário |
-RF003 - Consultar Usuários   | Consulta de todos os usuários com filtros. | Administrador, Gerente, Usuário |
-RF004 - Vizualizar Usuário     | Um usuário pode vizualizar os detalhes do seus usuário. | Administrador, Gerente, Usuário   |
-RF005 - Excluir Usuário     | Um usuário pode ser excluido ou pode apagar seu cadastrado. | Administrador, Gerente, Usuário |
-RF006 - Cadatrar Tarefa     | Um usuário pode cadastrar tarefas. Um tarefa tem código, identificador, nome, descrição, links, data de criação, status (Planejada, Em Execução, Concluída, Cancelada), execuções (histórico de execuções), usuário, tags | Administrador, Gerente, Usuário |
-RF007 - Alterar Tarefa     | Um usuário pode alterar suas tarefas. | Administrador, Gerente, Usuário |
-RF008 - Consultar Tarefas     | Um usuário pode consultar todas as suas tarefas. | Administrador, Gerente, Usuário   |
-RF009 - Vizualizar Tarefa     | Um usuário pode selecionar uma tarefa para vizualizar os detalhes. | Administrador, Gerente, Usuário   |
-RF010 - Excluir Tarefa     | Um usuário pode excluir tarefas. | Administrador, Gerente, Usuário |
-RF011 - Vizualizar Tarefas do Usuário | Um usuário pode vizualizar a lista de todas suas tarefas e selecionar uma tarefa para vizualizar os detalhes. | Administrador, Gerente, Usuário   |
+RF001 - Cadastrar Funcionário     | Um funcionário pode se auto-cadastrar ou ser cadastrado. Um Funcionário tem código, nome, e-mail, senha | Administrador, Gerente, Funcionário |
+RF002 - Alterar Funcionário     | Um funcionário pode alterar seus dados. | Administrador, Gerente, Funcionário |
+RF003 - Consultar Funcionários   | Consulta de todos os funcionários com filtros. | Administrador, Gerente, Funcionário |
+RF004 - Vizualizar Funcionário     | Um funcionário pode vizualizar os detalhes do seus Funcionário. | Administrador, Gerente, Funcionário   |
+RF005 - Excluir Funcionário     | Um funcionário pode ser excluido ou pode apagar seu cadastrado. | Administrador, Gerente, Funcionário |
+RF006 - Cadastrar Bolsa de Sangue     | Um funcionário pode cadastrar bolsas de sangue. Um Bolsa de Sangue  tem código, identificação da doação,  data e hora da coleta, tipo de doação (Voluntária, Autóloga), fenotipagem ABO/Rh, tipo de hemocomponente,data e hora da validade, status (Disponível,Indisponível), Banco de Sangue,  Funcionário| Administrador, Gerente, Funcionário |
+RF007 - Alterar Bolsa de Sangue | Um Funcionário pode alterar as informações das Bolsas de Sangue que estiverem com informações equivocadas. | Administrador, Gerente, Funcionário |
+RF008 - Consultar Bolsas de Sangue     | Um Funcionário pode consultar todas as Bolsas de Sangue que estiverem no Banco de Sangue. | Administrador, Gerente, Funcionário   |
+RF009 - Vizualizar Tarefa     | Um Funcionário pode selecionar uma tarefa para vizualizar os detalhes. | Administrador, Gerente, Funcionário   |
+RF010 - Excluir Tarefa     | Um Funcionário pode excluir Bolsas de Sangue. | Administrador, Gerente, Funcionário |
+RF011 - Vizualizar Bolsas de Sangue do Banco de Sangue | Um Funcionário pode vizualizar a lista de todas as Bolsas de Sangue do Banco de Sangue e selecionar uma Bolsa de Sangue para vizualizar os detalhes. | Administrador, Gerente, Funcionário   |
 RF012 - Preencher |
 RF013 - Preencher |
 RF014 - Preencher |
