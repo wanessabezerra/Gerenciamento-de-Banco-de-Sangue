@@ -7,7 +7,7 @@ RF002 - Alterar Funcionário     | Um funcionário pode alterar seus dados. | Ad
 RF003 - Consultar Funcionários   | Consulta de todos os funcionários com filtros. | Administrador, Gerente, Funcionário |
 RF004 - Vizualizar Funcionário     | Um funcionário pode vizualizar os detalhes do seus Funcionário. | Administrador, Gerente, Funcionário   |
 RF005 - Excluir Funcionário     | Um funcionário pode ser excluido ou pode apagar seu cadastrado. | Administrador, Gerente, Funcionário |
-RF006 - Cadastrar Bolsa de Sangue     | Um funcionário pode cadastrar bolsas de sangue. Um Bolsa de Sangue  tem código, identificação da doação,  data e hora da coleta, tipo de doação (Voluntária, Autóloga), fenotipagem ABO/Rh, tipo de hemocomponente,data e hora da validade, status (Disponível,Indisponível), Banco de Sangue,  Funcionário| Administrador, Gerente, Funcionário |
+RF006 - Cadastrar Bolsa de Sangue     | Um funcionário pode cadastrar bolsas de sangue. Uma Bolsa de Sangue  tem código, identificação da doação,  data e hora da coleta, tipo de doação (Voluntária, Autóloga), fenotipagem ABO/Rh, tipo de hemocomponente, data e hora da validade, status (Disponível,Indisponível), Banco de Sangue,  Funcionário| Administrador, Gerente, Funcionário |
 RF007 - Alterar Bolsa de Sangue | Um Funcionário pode alterar as informações das Bolsas de Sangue que estiverem com informações equivocadas. | Administrador, Gerente, Funcionário |
 RF008 - Consultar Bolsas de Sangue     | Um Funcionário pode consultar todas as Bolsas de Sangue que estiverem no Banco de Sangue. | Administrador, Gerente, Funcionário   |
 RF009 - Vizualizar Tarefa     | Um Funcionário pode selecionar uma tarefa para vizualizar os detalhes. | Administrador, Gerente, Funcionário   |
