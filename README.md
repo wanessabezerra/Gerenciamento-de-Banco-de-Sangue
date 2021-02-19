@@ -4,10 +4,10 @@ Sistema para Gerenciamento de Banco de Sangue. Nele é possível gerenciar os n�
 
 ## Equipe
 
-Membro | Papel | E-mail | Github |
-| --------- | --------- | --------- | --------- |
-    Renata Karla Araújo dos Santos  | Analista, Dev e Tester | renatakarla02@gmail.com | renatak12 |
-    Wanessa da Silva Bezerra | Analista, Dev e Tester | wanessaparelhas68@gmail.com | wanessabezerra |
+Membro          |     Papel              |   E-mail                     | Github         |
+--------------- | ---------------------- | ---------------------------- | -------------- |
+Renata Araujo   | Analista, Dev e Tester | renatakarla02@gmail.com      | renatak12      |
+Wanessa Bezerra | Analista, Dev e Tester | wanessaparelhas68@gmail.com  | wanessabezerra |
 
 ## Links
 
