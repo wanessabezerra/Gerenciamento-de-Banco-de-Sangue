@@ -14,4 +14,4 @@ Wanessa Bezerra | Analista, Dev e Tester | wanessaparelhas68@gmail.com  | waness
 * [Requisitos](<https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/main/docs/REQUISITOS.md>)
 * [Modelo de Entidade e Relacionamento](<https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/main/docs/MODELO_ER.md>)
 * [Modelo Relacional](<https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/main/docs/MODELO_R.md>)
-* [Dicionário de Dados](<https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/main/docs/DICIONARIO_DADOS.md)
+* [Dicionário de Dados](<https://github.com/wanessabezerra/Gerenciamento-de-Banco-de-Sangue/blob/main/docs/DICIONARIO_DADOS.md>)
