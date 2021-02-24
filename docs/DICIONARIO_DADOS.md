@@ -1,19 +1,19 @@
 # Dicionário de dados
 Dicionário de dados centraliza informações sobre o conjunto de dados (dataset) sob análise. Seu propósito é melhorar a comunicação entre todos os envolvidos no projeto, alem de ser um repositório (documento) que descreve, de forma estruturada, o significado, origem, relacionamento e uso dos dados.
 
-Tabela: Banco de Sangue
----------------------        
-Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
---------        |------------|---------------|--------------|-----------------------------------------------|
-código          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de banco de sangue. |
---------        |            |               |              |                                               |
-nome            | NOT NULL   |   CHAR[100]   |     100      | Limite de 100 caracteres.                     |
---------        |            |               |              |                                               |
-capacidade      | NOT NULL   |   NUMERIC     |      4       | Capacidade maxima do banco.                   |
---------        |------------|---------------|--------------|-----------------------------------------------|
+## Tabela: Banco de Sangue
+      
+| Atributo      | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
+|---------------|------------|---------------|--------------|-----------------------------------------------|
+| código        |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de banco de sangue. |
+|               |            |               |              |                                               |
+| nome          | NOT NULL   |   CHAR[100]   |     100      | Limite de 100 caracteres.                     |
+|               |            |               |              |                                               |
+| capacidade    | NOT NULL   |   NUMERIC     |      4       | Capacidade maxima do banco.                   |
 
-Tabela: Bolsa de Sangue
----------------------        
+
+## Tabela: Bolsa de Sangue
+       
 Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 --------        |------------|---------------|--------------|-----------------------------------------------|
 id da doação    |  PRIMARY   |   NUMERIC     |     4        | Identificador incremental de bolsa de sangue. |
