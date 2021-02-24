@@ -1,11 +1,11 @@
 # Dicionário de dados
-Dicionário de dados centraliza informações sobre o conjunto de dados (dataset) sob análise. Seu propósito é melhorar a comunicação entre todos os envolvidos no projeto, alem de ser um repositório (documento) que descreve, de forma estruturada, o significado, origem, relacionamento e uso dos dados.
+Dicionário de dados centraliza informações sobre o conjunto de dados (dataset) sob análise. Seu propósito é melhorar a comunicação entre todos os envolvidos no projeto, além de ser um repositório (documento) que descreve de forma estruturada, o significado, origem, relacionamento e uso dos dados.
 
 ## Tabela: Banco de Sangue
       
 | Atributo      | Chave      | Tipo de dado  | Tamanho      | Descrição                                       |
 |---------------|------------|---------------|--------------|-------------------------------------------------|
-| código        |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de banco de sangue.   |
+| codigo        |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de banco de sangue.   |
 | nome          | NOT NULL   |   CHAR[100]   |     100      | Limite de 100 caracteres.                       |
 | capacidade    | NOT NULL   |   NUMERIC     |      4       | Capacidade maxima do banco.                     |
 
@@ -14,10 +14,11 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
        
 | Atributo                | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-------------------------|------------|---------------|--------------|-----------------------------------------------|
-| identificacao_da_doação |  PRIMARY   |   NUMERIC     |     4        | Identificador incremental de bolsa de sangue. |
-| data coleta             | NOT NULL   |   NUMERIC     |     10       | Coleta de sangue.                             |
-| hora coleta             | NOT NUL    |   TIME        |     10       | Horario da realização da coleta.              |
-| tipo de doação          | NOT NULL   |   CHAR[20]    |     20       | Se a doação é Voluntária, Autóloga.           |
+| codigo                  |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
+| identificacao_da_doacao |  PRIMARY   |   NUMERIC     |      4       | Identificador da doacao.                      |
+| data_coleta             | NOT NULL   |   NUMERIC     |     10       | Coleta de sangue.                             |
+| hora_coleta             | NOT NULL   |   TIME        |     10       | Horario da realização da coleta.              |
+| tipo_de_doacao          | NOT NULL   |   CHAR[20]    |     20       | Se a doação é Voluntária, Autóloga.           |
 | tipo_sanguineo          | NOT NULL   |   CHAR[3]     |      3       | Identificação do tipo sanguineo coletado.     |
 | hemocomponente          | NOT NULL   |   CHAR[20]    |     20       | Tipo de hemocomponente presente.              |
 | data_de_validade        | NOT NULL   |   NUMERIC     |     10       | Data de validade do sangue coletado.          |
@@ -28,7 +29,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
-| nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do tipo sanguíneo.                               |
+| nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do tipo sanguíneo.                       |
 
 
 ## Tabela: Tipo de hemocomponente
@@ -36,7 +37,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de hemocomponente.  |
-| nome            | NOT NULL   |   CHAR[100]   |     100      | Nome do homocomponente.                               |
+| nome            | NOT NULL   |   CHAR[100]   |    100       | Nome do homocomponente.                       |
 | descrição       | NOT NULL   |   CHAR[256]   |    256       | Descrição do homocomponente.                  |
 
 
@@ -44,30 +45,32 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
        
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
+| codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de saída.           |
 | nome_do_hospital| NOT NULL   |   CHAR[256]   |     256      | Local de saida.                               |
 | nome_do_paciente| NOT NULL   |   CHAR[256]   |     256      | Nome do paciente.                             |
-| data            | NOT NULL   |   NUMERIC     |     10       | Data de saida.                                |
+| data_de_saida   | NOT NULL   |   NUMERIC     |     10       | Data de saida.                                |
 
 ## Tabela: Doador
        
-| Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
-|-----------------|------------|---------------|--------------|-----------------------------------------------| 
-| codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de doador.          |
-| nome            |  PRIMARY   |  CHAR[100]    |      100     | Nome do doador.           |
-| sexo            | NOT NULL   |  CHAR[100]    |      100     | Sexo do doador.                               |
-| tipo de sangue  | NOT NULL   |  CHAR[3]      |      3       | Tipo sanguineo.                               |
-| endereço        | NOT NULL   |  CHAR[100]    |      100     | Localização do doador.                        |
-| data de nasc    | NOT NULL   |   NUMERIC     |      10      | Data formato (00/00/0000)                     |
-| telefone        | NOT NULL   |   CHAR[14]    |       14     | Telefone com formato: (XX)XXXXX-XXXX          |
+| Atributo           | Chave            | Tipo de dado  | Tamanho      | Descrição                            |
+|--------------------|------------------|---------------|--------------|--------------------------------------| 
+| codigo             |  PRIMARY         |  NUMERIC      |       4      | Identificador incremental de doador. |
+| nome               |  PRIMARY         |  CHAR[100]    |     100      | Nome do doador.                      |
+| sexo               | NOT NULL         |  CHAR[100]    |     100      | Sexo do doador.                      |
+| tipo de sangue     | NOT NULL         |  CHAR[3]      |       3      | Tipo sanguineo.                      |
+| data_de_nascimento | NOT NULL         |   NUMERIC     |      10      | Data formato (00/00/0000)            |
+| telefone           | NOT NULL         |   CHAR[14]    |      14      | Telefone com formato: (XX)XXXXX-XXXX |
+| doador_endereco    | NOT NULL FOREIGN |               |              | Chave para um endereço do doador.    |
 
-## Tabela: Funcionario  
+
+## Tabela: Funcionário  
      
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de funcionario.     |
-| nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do usuario/funcionario de acesso.        |
+| nome            | NOT NULL   |   CHAR[100]   |     100      | Nome do usuario/funcionario de acesso.        |
 | e-mail          | NOT NULL   |   CHAR[256]   |     256      | Email com limite padrão de 256 caracteres.    |
-| username        | NOT NULL   |   CHAR[100]   |      100     | Identificação unica.                          |
+| username        | NOT NULL   |   CHAR[100]   |     100      | Identificação unica.                          |
 
 
 
