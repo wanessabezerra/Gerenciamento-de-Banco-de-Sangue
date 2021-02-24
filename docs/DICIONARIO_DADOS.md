@@ -114,5 +114,6 @@ cep             | NOT NULL   |   NUMERIC     |      10      |  Cep limitada a 10
 ### Referências
 
 [Exemplo de Dicionário - IBM](https://publib.boulder.ibm.com/tividd/td/ITMFTP/GC23-4803-00/pt_BR/HTML/TMTPmst80.htm)
+
 [dicionário de dados](https://www.luis.blog.br/dicionario-de-dados.html)
 
