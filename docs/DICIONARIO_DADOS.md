@@ -12,31 +12,31 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 
 ## Tabela: Bolsa de Sangue
        
-| Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
-|-----------------|------------|---------------|--------------|-----------------------------------------------|
-| id da doação    |  PRIMARY   |   NUMERIC     |     4        | Identificador incremental de bolsa de sangue. |
-| data coleta     | NOT NULL   |   NUMERIC     |     10       | Coleta de sangue.                             |
-| hora coleta     | NOT NUL    |   TIME        |     10       | Horario da realização da coleta.              |
-| tipo de doação  | NOT NULL   |   CHAR[20]    |     20       | Se a doação é Voluntária, Autóloga.           |
-| tipo sanguíneo  | NOT NULL   |   CHAR[3]     |      3       | Identificação do tipo sanguineo coletado.     |
-| hemocomponente  | NOT NULL   |   CHAR[20]    |     20       | Tipo de hemocomponente presente.              |
-| data de validade| NOT NULL   |   NUMERIC     |      10      | Data de validade do sangue coletado.          |
-| hora de validade| NOT NULL   |   TIME        |      10      | Hora de validade do sngue coletado.           |
+| Atributo                | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
+|-------------------------|------------|---------------|--------------|-----------------------------------------------|
+| identificacao_da_doação |  PRIMARY   |   NUMERIC     |     4        | Identificador incremental de bolsa de sangue. |
+| data coleta             | NOT NULL   |   NUMERIC     |     10       | Coleta de sangue.                             |
+| hora coleta             | NOT NUL    |   TIME        |     10       | Horario da realização da coleta.              |
+| tipo de doação          | NOT NULL   |   CHAR[20]    |     20       | Se a doação é Voluntária, Autóloga.           |
+| tipo_sanguineo          | NOT NULL   |   CHAR[3]     |      3       | Identificação do tipo sanguineo coletado.     |
+| hemocomponente          | NOT NULL   |   CHAR[20]    |     20       | Tipo de hemocomponente presente.              |
+| data_de_validade        | NOT NULL   |   NUMERIC     |     10       | Data de validade do sangue coletado.          |
+| hora_de_validade        | NOT NULL   |   TIME        |     10       | Hora de validade do sngue coletado.           |
 
 ## Tabela: Tipo sanguíneo
     
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| código          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
-| nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do doador.                               |
+| codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
+| nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do tipo sanguíneo.                               |
 
 
 ## Tabela: Tipo de hemocomponente
        
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| código          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de hemocomponente.  |
-| nome            | NOT NULL   |   CHAR[100]   |     100      | Nome do doador.                               |
+| codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de hemocomponente.  |
+| nome            | NOT NULL   |   CHAR[100]   |     100      | Nome do homocomponente.                               |
 | descrição       | NOT NULL   |   CHAR[256]   |    256       | Descrição do homocomponente.                  |
 
 
@@ -44,15 +44,16 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
        
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| nome do hospital| NOT NULL   |   CHAR[256]   |     256      | Local de saida.                               |
-| nome do paciente| NOT NULL   |   CHAR[256]   |     256      | Nome do paciente.                             |
+| nome_do_hospital| NOT NULL   |   CHAR[256]   |     256      | Local de saida.                               |
+| nome_do_paciente| NOT NULL   |   CHAR[256]   |     256      | Nome do paciente.                             |
 | data            | NOT NULL   |   NUMERIC     |     10       | Data de saida.                                |
 
 ## Tabela: Doador
        
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------| 
-| nome            |  PRIMARY   |  CHAR[100]    |      100     | Identificador incremental de doador.          |
+| codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de doador.          |
+| nome            |  PRIMARY   |  CHAR[100]    |      100     | Nome do doador.           |
 | sexo            | NOT NULL   |  CHAR[100]    |      100     | Sexo do doador.                               |
 | tipo de sangue  | NOT NULL   |  CHAR[3]      |      3       | Tipo sanguineo.                               |
 | endereço        | NOT NULL   |  CHAR[100]    |      100     | Localização do doador.                        |
@@ -63,18 +64,20 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
      
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| código          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de funcionario.     |
+| codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de funcionario.     |
 | nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do usuario/funcionario de acesso.        |
+| e-mail          | NOT NULL   |   CHAR[256]   |     256      | Email com limite padrão de 256 caracteres.    |
 | username        | NOT NULL   |   CHAR[100]   |      100     | Identificação unica.                          |
-| email           | NOT NULL   |   CHAR[256]   |     256      | Email com limite padrão de 256 caracteres.    |
+
 
 
 ## Tabela: Endereço
       
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| rua             | NOT NULL   |   CHAR[50]    |     50       |  Rua limitada a 50 caracteres.                |
-| numero          | NOT NULL   |   NUMERIC     |     4        |  Numero limitada a 4 caracteres.              |
+| codigo          |  PRIMARY   |   NUMERIC     |      4       |  Identificador incremental de endereço.       |
+| rua             | NOT NULL   |   CHAR[50]    |      50      |  Rua limitada a 50 caracteres.                |
+| numero          | NOT NULL   |   NUMERIC     |       4      |  Numero limitada a 4 caracteres.              |
 | bairro          | NOT NULL   |   CHAR[50]    |      50      |  Bairro limitada a 50 caracteres.             |
 | estado          | NOT NULL   |   CHAR[50]    |      50      |  Estado limitada a 50 caracteres.             |
 | cidade          | NOT NULL   |   CHAR[100]   |      50      |  Cidade limitada a 50 caracteres.             |
@@ -85,5 +88,5 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 
 [Exemplo de Dicionário - IBM](https://publib.boulder.ibm.com/tividd/td/ITMFTP/GC23-4803-00/pt_BR/HTML/TMTPmst80.htm)
 
-[dicionário de dados](https://www.luis.blog.br/dicionario-de-dados.html)
+[Dicionário de Dados](https://www.luis.blog.br/dicionario-de-dados.html)
 
