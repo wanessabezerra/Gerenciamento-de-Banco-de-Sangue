@@ -3,6 +3,6 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 
 
 |Entidade: Funcionario                                                                               |
------------------------------------------------------------------------------------------------------|
-| **Atributo**        | **Classe**      | **Domínio**       | **Tamanho**      | **Descrição**                       |
------------------------------------------------------------------------------------------------------|
+
+| **Atributo**        | **Classe**      | **Domínio**       | **Tamanho**      | **Descrição**       |
+
