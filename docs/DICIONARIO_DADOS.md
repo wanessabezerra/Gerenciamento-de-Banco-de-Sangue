@@ -28,7 +28,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
     
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
+| codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguíneo.  |
 | nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do tipo sanguíneo.                       |
 
 
@@ -65,12 +65,13 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 
 ## Tabela: Funcionário  
      
-| Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
-|-----------------|------------|---------------|--------------|-----------------------------------------------|
-| codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de funcionario.     |
-| nome            | NOT NULL   |   CHAR[100]   |     100      | Nome do usuario/funcionario de acesso.        |
-| e-mail          | NOT NULL   |   CHAR[256]   |     256      | Email com limite padrão de 256 caracteres.    |
-| username        | NOT NULL   |   CHAR[100]   |     100      | Identificação unica.                          |
+| Atributo             | Chave            | Tipo de dado  | Tamanho      | Descrição                                     |
+|----------------------|------------------|---------------|--------------|-----------------------------------------------|
+| codigo               |  PRIMARY         |   NUMERIC     |      4       | Identificador incremental de funcionario.     |
+| nome                 | NOT NULL         |   CHAR[100]   |     100      | Nome do usuario/funcionario de acesso.        |
+| e-mail               | NOT NULL         |   CHAR[256]   |     256      | Email com limite padrão de 256 caracteres.    |
+| username             | NOT NULL         |   CHAR[100]   |     100      | Identificação unica.                          |
+| funcionario_endereco | NOT NULL FOREIGN |               |              | Chave para um endereço do funcionário.        |
 
 
 
