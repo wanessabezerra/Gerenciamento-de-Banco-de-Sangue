@@ -1,17 +1,17 @@
 # Dicionário de dados
+
 Dicionário de dados centraliza informações sobre o conjunto de dados (dataset) sob análise. Seu propósito é melhorar a comunicação entre todos os envolvidos no projeto, além de ser um repositório (documento) que descreve de forma estruturada, o significado, origem, relacionamento e uso dos dados.
 
 ## Tabela: Banco de Sangue
-      
+
 | Atributo      | Chave      | Tipo de dado  | Tamanho      | Descrição                                       |
 |---------------|------------|---------------|--------------|-------------------------------------------------|
 | codigo        |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de banco de sangue.   |
 | nome          | NOT NULL   |   VARCHAR[50] |      50      | Limite de caracteres varia.                       |
 | capacidade    | NOT NULL   |   NUMERIC     |      4       | Capacidade maxima do banco.                     |
 
-
 ## Tabela: Bolsa de Sangue
-       
+
 | Atributo                | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-------------------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo                  |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
@@ -25,24 +25,22 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | hora_de_validade        | NOT NULL   |   TIME        |     10       | Hora de validade do sngue coletado.           |
 
 ## Tabela: Tipo sanguíneo
-    
+
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguíneo.  |
 | nome            | NOT NULL   |   VARCHAR[50] |      50      | Nome do tipo sanguíneo.                       |
 
-
 ## Tabela: Tipo de hemocomponente
-       
+
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |    NUMERIC    |      4       | Identificador incremental de hemocomponente.  |
 | nome            | NOT NULL   |   VARCHAR[256]|    256       | Nome do homocomponente.                       |
 | descrição       | NOT NULL   |   CHAR[256]   |    256       | Descrição do homocomponente.                  |
 
-
 ## Tabela: Saída
-       
+
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de saída.           |
@@ -51,9 +49,9 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | data_de_saida   | NOT NULL   |  NUMERIC      |     10       | Data de saida.                                |
 
 ## Tabela: Doador
-       
+
 | Atributo           | Chave            | Tipo de dado  | Tamanho      | Descrição                            |
-|--------------------|------------------|---------------|--------------|--------------------------------------| 
+|--------------------|------------------|---------------|--------------|--------------------------------------|
 | codigo             |  PRIMARY         |  NUMERIC      |       4      | Identificador incremental de doador. |
 | nome               |  PRIMARY         |  VARCHAR[100] |     100      | Nome do doador.                      |
 | sexo               | NOT NULL         |  VARCHAR[15]  |      15      | Sexo do doador.                      |
@@ -62,9 +60,8 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | telefone           | NOT NULL         |   CHAR[14]    |      14      | Telefone com formato: (XX)XXXXX-XXXX |
 | doador_endereco    | NOT NULL FOREIGN |  VARCHAR[256] |     256      | Chave para um endereço do doador.    |
 
-
 ## Tabela: Funcionário  
-     
+
 | Atributo             | Chave            | Tipo de dado  | Tamanho      | Descrição                                     |
 |----------------------|------------------|---------------|--------------|-----------------------------------------------|
 | codigo               |  PRIMARY         |   NUMERIC     |      4       | Identificador incremental de funcionario.     |
@@ -73,10 +70,8 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | username             | NOT NULL         |   CHAR[100]   |     100      | Identificação unica.                          |
 | funcionario_endereco | NOT NULL FOREIGN |   VARCHAR[256]|     256      | Chave para um endereço do funcionário.        |
 
-
-
 ## Tabela: Endereço
-      
+
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |   NUMERIC     |      4       |  Identificador incremental de endereço.       |
@@ -87,10 +82,8 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | cidade          | NOT NULL   |   VARCHAR[50] |      50      |  Cidade limitada a 50 caracteres.             |
 | cep             | NOT NULL   |   NUMERIC     |      10      |  Cep limitada a 10 caracteres.                |
 
-
 ### Referências
 
 [Exemplo de Dicionário - IBM](https://publib.boulder.ibm.com/tividd/td/ITMFTP/GC23-4803-00/pt_BR/HTML/TMTPmst80.htm)
 
 [Dicionário de Dados](https://www.luis.blog.br/dicionario-de-dados.html)
-
