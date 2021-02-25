@@ -6,7 +6,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo      | Chave      | Tipo de dado  | Tamanho      | Descrição                                       |
 |---------------|------------|---------------|--------------|-------------------------------------------------|
 | codigo        |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de banco de sangue.   |
-| nome          | NOT NULL   |   CHAR[100]   |     100      | Limite de 100 caracteres.                       |
+| nome          | NOT NULL   |   VARCHAR[50] |      50      | Limite de caracteres varia.                       |
 | capacidade    | NOT NULL   |   NUMERIC     |      4       | Capacidade maxima do banco.                     |
 
 
@@ -29,15 +29,15 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |   NUMERIC     |      4       | Identificador incremental de tipo sanguíneo.  |
-| nome            | NOT NULL   |   CHAR[100]   |      100     | Nome do tipo sanguíneo.                       |
+| nome            | NOT NULL   |   VARCHAR[50] |      50      | Nome do tipo sanguíneo.                       |
 
 
 ## Tabela: Tipo de hemocomponente
        
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
-| codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de hemocomponente.  |
-| nome            | NOT NULL   |   CHAR[100]   |    100       | Nome do homocomponente.                       |
+| codigo          |  PRIMARY   |    NUMERIC    |      4       | Identificador incremental de hemocomponente.  |
+| nome            | NOT NULL   |   VARCHAR[256]|    256       | Nome do homocomponente.                       |
 | descrição       | NOT NULL   |   CHAR[256]   |    256       | Descrição do homocomponente.                  |
 
 
@@ -46,21 +46,21 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |  NUMERIC      |     4        | Identificador incremental de saída.           |
-| nome_do_hospital| NOT NULL   |   CHAR[256]   |     256      | Local de saida.                               |
-| nome_do_paciente| NOT NULL   |   CHAR[256]   |     256      | Nome do paciente.                             |
-| data_de_saida   | NOT NULL   |   NUMERIC     |     10       | Data de saida.                                |
+| nome_do_hospital| NOT NULL   |  VARCHAR[256] |     256      | Local de saida.                               |
+| nome_do_paciente| NOT NULL   |  VARCHAR[256] |     256      | Nome do paciente.                             |
+| data_de_saida   | NOT NULL   |  NUMERIC      |     10       | Data de saida.                                |
 
 ## Tabela: Doador
        
 | Atributo           | Chave            | Tipo de dado  | Tamanho      | Descrição                            |
 |--------------------|------------------|---------------|--------------|--------------------------------------| 
 | codigo             |  PRIMARY         |  NUMERIC      |       4      | Identificador incremental de doador. |
-| nome               |  PRIMARY         |  CHAR[100]    |     100      | Nome do doador.                      |
-| sexo               | NOT NULL         |  CHAR[100]    |     100      | Sexo do doador.                      |
+| nome               |  PRIMARY         |  VARCHAR[100] |     100      | Nome do doador.                      |
+| sexo               | NOT NULL         |  VARCHAR[15]  |      15      | Sexo do doador.                      |
 | tipo de sangue     | NOT NULL         |  CHAR[3]      |       3      | Tipo sanguineo.                      |
 | data_de_nascimento | NOT NULL         |   NUMERIC     |      10      | Data formato (00/00/0000)            |
 | telefone           | NOT NULL         |   CHAR[14]    |      14      | Telefone com formato: (XX)XXXXX-XXXX |
-| doador_endereco    | NOT NULL FOREIGN |               |              | Chave para um endereço do doador.    |
+| doador_endereco    | NOT NULL FOREIGN |  VARCHAR[256] |     256      | Chave para um endereço do doador.    |
 
 
 ## Tabela: Funcionário  
@@ -71,7 +71,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | nome                 | NOT NULL         |   CHAR[100]   |     100      | Nome do usuario/funcionario de acesso.        |
 | e-mail               | NOT NULL         |   CHAR[256]   |     256      | Email com limite padrão de 256 caracteres.    |
 | username             | NOT NULL         |   CHAR[100]   |     100      | Identificação unica.                          |
-| funcionario_endereco | NOT NULL FOREIGN |               |              | Chave para um endereço do funcionário.        |
+| funcionario_endereco | NOT NULL FOREIGN |   VARCHAR[256]|     256      | Chave para um endereço do funcionário.        |
 
 
 
@@ -80,11 +80,11 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo        | Chave      | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|------------|---------------|--------------|-----------------------------------------------|
 | codigo          |  PRIMARY   |   NUMERIC     |      4       |  Identificador incremental de endereço.       |
-| rua             | NOT NULL   |   CHAR[50]    |      50      |  Rua limitada a 50 caracteres.                |
+| rua             | NOT NULL   |   VARCHAR[50] |      50      |  Rua limitada a 50 caracteres.                |
 | numero          | NOT NULL   |   NUMERIC     |       4      |  Numero limitada a 4 caracteres.              |
-| bairro          | NOT NULL   |   CHAR[50]    |      50      |  Bairro limitada a 50 caracteres.             |
-| estado          | NOT NULL   |   CHAR[50]    |      50      |  Estado limitada a 50 caracteres.             |
-| cidade          | NOT NULL   |   CHAR[100]   |      50      |  Cidade limitada a 50 caracteres.             |
+| bairro          | NOT NULL   |   VARCHAR[50] |      50      |  Bairro limitada a 50 caracteres.             |
+| estado          | NOT NULL   |   VARCHAR[50] |      50      |  Estado limitada a 50 caracteres.             |
+| cidade          | NOT NULL   |   VARCHAR[50] |      50      |  Cidade limitada a 50 caracteres.             |
 | cep             | NOT NULL   |   NUMERIC     |      10      |  Cep limitada a 10 caracteres.                |
 
 
