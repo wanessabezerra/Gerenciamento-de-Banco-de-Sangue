@@ -53,14 +53,14 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 ## Tabela: FuncionarioBanco_de_Sangue
 
 | Atributo           | Chave      | Tipo de dado  | Tamanho | Descrição                     |
-|--------------------|:----------:|:-------------:|:---- --:|-------------------------------|
+|--------------------|:----------:|:-------------:|:------:|-------------------------------|
 | cod_funcionario    |     FK     |  NUMERIC      |         | Chave para um funcionário.    |
 | cod_banco_de_sangue|     FK     |  NUMERIC      |         | Chave para um banco de sangue.|
 
 ## Tabela: Bolsa de Sangue
 
 | Atributo                  | Chave | Tipo de dado  | Tamanho      | Descrição                                     |
-|---------------------------:------:|:-------------:|:------------:|-----------------------------------------------|
+|---------------------------|:-----:|:-------------:|:------------:|-----------------------------------------------|
 | codigo                    | PK    |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
 | identificacao_da_doacao   | NN    |   NUMERIC     |      4       | Identificador da doacao.                      |
 | data_hora_coleta          | NN    |   NUMERIC     |     10       | Coleta de sangue.                             |
@@ -87,14 +87,14 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 ## Tabela: DoadorBolsa_de_Sangue
 
 | Atributo           | Chave      | Tipo de dado  | Tamanho | Descrição                     |
-|--------------------|:----------:|:-------------:|:---- --:|-------------------------------|
+|--------------------|:----------:|:-------------:|:-------:|-------------------------------|
 | cod_doador         |     FK     |  NUMERIC      |         | Chave para um doador.         |
 | cod_bolsa_de_sangue|     FK     |  NUMERIC      |         | Chave para um bolsa de sangue.|
 
 ## Tabela: Bolsa_de_SangueBanco_de_Sangue
 
 | Atributo           | Chave      | Tipo de dado  | Tamanho | Descrição                     |
-|--------------------|:----------:|:-------------:|:---- --:|-------------------------------|
+|--------------------|:----------:|:-------------:|:-------:|-------------------------------|
 | cod_bolsa_de_sangue|     FK     |  NUMERIC      |         | Chave para um bolsa de sangue.|
 | cod_banco_de_sangue|     FK     |  NUMERIC      |         | Chave para um banco de sangue.|
 
@@ -110,7 +110,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 ## Tabela: Bolsa_de_SangueSaida
 
 | Atributo           | Chave      | Tipo de dado  | Tamanho | Descrição                     |
-|--------------------|:----------:|:-------------:|:---- --:|-------------------------------|
+|--------------------|:----------:|:-------------:|:-------:|-------------------------------|
 | cod_bolsa_de_sangue|     FK     |  NUMERIC      |         | Chave para um bolsa de sangue.|
 | cod_saida          |     FK     |  NUMERIC      |         | Chave para uma saída.         |
 
