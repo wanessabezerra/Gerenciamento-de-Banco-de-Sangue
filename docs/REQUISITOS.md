@@ -1,7 +1,7 @@
 # Lista de Requisitos
 
-1. Um **funcionário** pode realizar o cadastro do **doador**, da **bolsa de sangue**, guardar a **bolsa de sangue** no **banco de sangue** e realizar o cadastro da **saída** da **bolsa de sangue**;
-2. Funcionário tem nome, e-mail, senha;
+1. Um **funcionário** pertence ao **banco de sangue**;  
+2. Funcionário tem nome, e-mail, username, endereço;
 3. Um **banco de sangue** é formado por um conjunto de bolsas de sangue;
 4. Um **banco de sangue** guarda uma quantidade de bolsas de sangue;
 5. Um **banco de sangue** tem de um ou mais **funcionários**;
