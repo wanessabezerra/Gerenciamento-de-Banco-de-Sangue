@@ -52,3 +52,11 @@ CREATE TABLE `tipo_sanguineo` (
   `nome` varchar(50) NOT NULL,
   PRIMARY KEY (`codigo`),
 );
+
+CREATE TABLE `tipo_de_hemocomponente` (
+  `codigo` int(4) NOT NULL,  
+  `nome` varchar(100) NOT NULL,
+  `descricao` varchar(256) NOT NULL,
+  PRIMARY KEY (`codigo`),
+);
+
