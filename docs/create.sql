@@ -46,3 +46,9 @@ CREATE TABLE `bolsa_de_sangue` (
   foreign key (cod_tipo_sanguineo) references tipo_sanguineo(codigo) on delete set null,
   foreign key (cod_tipo_de_hemocomponente) references tipo_de_hemocomponente(codigo) on delete set null
 );
+
+CREATE TABLE `tipo_sanguineo` (
+  `codigo` int(4) NOT NULL,  
+  `nome` varchar(50) NOT NULL,
+  PRIMARY KEY (`codigo`),
+);
