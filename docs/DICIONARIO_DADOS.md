@@ -8,7 +8,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 |--------------------|:-----------:|:-------------:|:------------:|--------------------------------------|
 | codigo             | PK          |  NUMERIC      |       4      | Identificador incremental de doador. |
 | nome               | NN          |  VARCHAR[100] |     100      | Nome do doador.                      |
-| sexo               | NN          |  CHAR[1]      |      1      | Sexo do doador.                      |
+| sexo               | NN          |  CHAR[1]      |       1      | Sexo do doador (M/F).                |
 | tipo de sangue     | NN          |  CHAR[3]      |       3      | Tipo sanguineo.                      |
 | data_de_nascimento | NN          |  CHAR[10]     |      10      | Data formato (XX/XX/XXXX).           |
 | cod_endereco       | FK          |  NUMERIC      |              | Chave para um endereço.              |
@@ -81,8 +81,8 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo        | Chave | Tipo de dado  | Tamanho      | Descrição                                     |
 |-----------------|:-----:|:-------------:|:------------:|-----------------------------------------------|
 | codigo          | PK    |   NUMERIC     |      4       | Identificador incremental de hemocomponente.  |
-| nome            | NN    |   VARCHAR[256]|    256       | Nome do homocomponente.                       |
-| descrição       | NN    |   CHAR[256]   |    256       | Descrição do homocomponente.                  |
+| nome            | NN    |   VARCHAR[100]|    100       | Nome do homocomponente.                       |
+| descricao       | NN    |   VARCHAR[256]|    256       | Descrição do homocomponente.                  |
 
 ## Tabela: DoadorBolsa_de_Sangue
 
@@ -103,8 +103,8 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 | Atributo          | Chave | Tipo de dado  | Tamanho      | Descrição                                     |
 |:----------------- |:-----:|:-------------:|:------------:|-----------------------------------------------|
 | codigo            | PK    |  NUMERIC      |     4        | Identificador incremental de saída.           |
-| nome_do_hospital  | NN    |  VARCHAR[256] |     256      | Nome do hospital.                             |
-| nome_do_paciente  | NN    |  VARCHAR[256] |     256      | Nome do paciente.                             |
+| nome_do_hospital  | NN    |  VARCHAR[100] |     100      | Nome do hospital.                             |
+| nome_do_paciente  | NN    |  VARCHAR[100] |     100      | Nome do paciente.                             |
 | data_hora_de_saida| NN    |  DATETIME     |     10       | Data de saida.                                |
 
 ## Tabela: Bolsa_de_SangueSaida
