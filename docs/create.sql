@@ -42,7 +42,7 @@ CREATE TABLE `bolsa_de_sangue` (
   `data_hora_coleta` DATATIME NOT NULL,
   `tipo_de_doacao` char(20) NOT NULL,
   `data_hora_validade` DATATIME NOT NULL,
-  PRIMARY KEY (`matricula`),
+  PRIMARY KEY (`codigo`),
   foreign key (cod_tipo_sanguineo) references tipo_sanguineo(codigo) on delete set null,
   foreign key (cod_tipo_de_hemocomponente) references tipo_de_hemocomponente(codigo) on delete set null
 );
