@@ -19,7 +19,6 @@ CREATE TABLE `endereco` (
   PRIMARY KEY (`codigo`),
 );
 
-
 CREATE TABLE `funcionario` (
   `codigo` int(4) NOT NULL,  
   `nome` char(100) NOT NULL,
@@ -29,3 +28,11 @@ CREATE TABLE `funcionario` (
   UNIQUE KEY `username` (`username`)
   foreign key (cod_endereco) references funcionario(codigo) on delete set null
 );
+
+CREATE TABLE `banco_de_sangue` (
+  `codigo` int(4) NOT NULL,  
+  `nome` varchar(50) NOT NULL,
+  `capacidade` int(4) NOT NULL,
+  PRIMARY KEY (`codigo`),
+);
+
