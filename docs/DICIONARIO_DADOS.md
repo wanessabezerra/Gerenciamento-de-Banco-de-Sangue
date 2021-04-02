@@ -53,7 +53,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 ## Tabela: FuncionarioBanco_de_Sangue
 
 | Atributo           | Chave      | Tipo de dado  | Tamanho | Descrição                     |
-|--------------------|:----------:|:-------------:|:------:|-------------------------------|
+|--------------------|:----------:|:-------------:|:-------:|-------------------------------|
 | cod_funcionario    |     FK     |  NUMERIC      |         | Chave para um funcionário.    |
 | cod_banco_de_sangue|     FK     |  NUMERIC      |         | Chave para um banco de sangue.|
 
@@ -63,10 +63,10 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 |---------------------------|:-----:|:-------------:|:------------:|-----------------------------------------------|
 | codigo                    | PK    |   NUMERIC     |      4       | Identificador incremental de tipo sanguineo.  |
 | identificacao_da_doacao   | NN    |   NUMERIC     |      4       | Identificador da doacao.                      |
-| data_hora_coleta          | NN    |   NUMERIC     |     10       | Coleta de sangue.                             |
+| data_hora_coleta          | NN    |   DATATIME    |     10       | Coleta de sangue.                             |
 | tipo_de_doacao            | NN    |   CHAR[20]    |     20       | Se a doação é Voluntária, Autóloga.           |
 | data_hora_de_validade     | NN    |   DATATIME    |     10       | Data de validade do sangue coletado.          |
-| tipo_sanguineo            | FK    |   NUMERIC     |              | Chave para um tipo sanguíneo.                 |
+| cod_tipo_sanguineo        | FK    |   NUMERIC     |              | Chave para um tipo sanguíneo.                 |
 | cod_tipo_de_hemocomponente| FK    |   NUMERIC     |              | Chave para um tipo de hemocomponente presente.|
 
 ## Tabela: Tipo sanguíneo
