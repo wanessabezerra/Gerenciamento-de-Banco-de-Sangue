@@ -8,7 +8,7 @@ Dicionário de dados centraliza informações sobre o conjunto de dados (dataset
 |--------------------|:-----------:|:-------------:|:------------:|--------------------------------------|
 | codigo             | PK          |  NUMERIC      |       4      | Identificador incremental de doador. |
 | nome               | NN          |  VARCHAR[100] |     100      | Nome do doador.                      |
-| sexo               | NN          |  VARCHAR[15]  |      15      | Sexo do doador.                      |
+| sexo               | NN          |  CHAR[1]      |      1      | Sexo do doador.                      |
 | tipo de sangue     | NN          |  CHAR[3]      |       3      | Tipo sanguineo.                      |
 | data_de_nascimento | NN          |  CHAR[10]     |      10      | Data formato (XX/XX/XXXX).           |
 | cod_endereco       | FK          |  NUMERIC      |              | Chave para um endereço.              |
