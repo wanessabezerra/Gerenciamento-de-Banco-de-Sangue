@@ -20,3 +20,12 @@ CREATE TABLE `endereco` (
 );
 
 
+CREATE TABLE `funcionario` (
+  `codigo` int(4) NOT NULL,  
+  `nome` char(100) NOT NULL,
+  `email` char(256) NOT NULL,
+  `username` char(100) NOT NULL,
+  PRIMARY KEY (`matricula`),
+  UNIQUE KEY `username` (`username`)
+  foreign key (cod_endereco) references funcionario(codigo) on delete set null
+);
