@@ -60,3 +60,10 @@ CREATE TABLE `tipo_de_hemocomponente` (
   PRIMARY KEY (`codigo`),
 );
 
+CREATE TABLE `saida` (
+  `codigo` int(4) NOT NULL,  
+  `nome_do_hospital` varchar(100) NOT NULL,
+  `nome_do_paciente` varchar(100) NOT NULL,
+  `data_hora_de_saida` DATATIME NOT NULL,
+  PRIMARY KEY (`codigo`),
+);
