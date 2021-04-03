@@ -5,13 +5,13 @@ CREATE TABLE `doador` (
   `tipo_de_sangue` CHAR(3) NOT NULL,
   `data_de_nascimento` VARCHAR(30) NOT NULL,
   `cod_endereco` INT NOT NULL,
-  CONSTRAINT `fk_endereco` FOREIGN KEY (`cod_endereco`) REFERENCES endereco(codigo) on delete set null
+  CONSTRAINT `fk_endereco` FOREIGN KEY (`cod_endereco`) REFERENCES endereco(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
 );
 
 CREATE TABLE `telefone` (
   `cod_doador` INT PRIMARY KEY,
   `numero_fone` CHAR(14) NOT NULL,
-  CONSTRAINT `fk_doador` FOREIGN KEY (`cod_doador`) REFERENCES doador(codigo) on delete set null
+  CONSTRAINT `fk_doador` FOREIGN KEY (`cod_doador`) REFERENCES doador(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
 );
 
 CREATE TABLE `endereco` (
@@ -29,9 +29,9 @@ CREATE TABLE `funcionario` (
   `nome` CHAR(100) NOT NULL,
   `email` CHAR(256) NOT NULL,
   `username` CHAR(100) NOT NULL,
+  `cod_endereco` INT NOT NULL,
   UNIQUE KEY `username` (`username`)
-  CONSTRAINT `fk_doador` FOREIGN KEY (`cod_doador`) REFERENCES doador(codigo) on delete set null
-  foreign key (cod_endereco) references funcionario(codigo) on delete set null
+  CONSTRAINT `fk_endereco` FOREIGN KEY (`cod_endereco`) REFERENCES endereco(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
 );
 
 CREATE TABLE `banco_de_sangue` (
