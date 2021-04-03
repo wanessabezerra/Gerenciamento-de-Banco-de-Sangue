@@ -40,6 +40,13 @@ CREATE TABLE `banco_de_sangue` (
   `capacidade` INT(4) NOT NULL,
 );
 
+CREATE TABLE `funcionarioBanco_de_sangue` (
+  `cod_funcionario` INT NOT NULL,
+  `cod_banco_de_sangue` INT NOT NULL,
+  CONSTRAINT `fk_funcionario` FOREIGN KEY (`cod_funcionario`) REFERENCES funcionario(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `fk_banco_de_sangue` FOREIGN KEY (`cod_banco_de_sangue`) REFERENCES banco_de_sangue(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
+);
+
 CREATE TABLE `bolsa_de_sangue` (
   `codigo` INT(4) PRIMARY KEY,  
   `identificacao_da_doacao` INT(4) NOT NULL,
@@ -48,6 +55,8 @@ CREATE TABLE `bolsa_de_sangue` (
   `data_hora_validade` DATATIME NOT NULL,
   foreign key (cod_tipo_sanguineo) references tipo_sanguineo(codigo) on delete set null,
   foreign key (cod_tipo_de_hemocomponente) references tipo_de_hemocomponente(codigo) on delete set null
+  CONSTRAINT `fk_tipo_sanguineo` FOREIGN KEY (`cod_tipo_sanguineo`) REFERENCES tipo_sanguineo(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `fk_tipo_de_hemocomponente` FOREIGN KEY (`cod_tipo_de_hemocomponente`) REFERENCES tipo_de_hemocomponente(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
 );
 
 CREATE TABLE `tipo_sanguineo` (
