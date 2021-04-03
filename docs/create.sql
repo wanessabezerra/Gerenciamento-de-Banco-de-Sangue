@@ -29,7 +29,6 @@ CREATE TABLE `funcionario` (
   `nome` CHAR(100) NOT NULL,
   `email` CHAR(256) NOT NULL,
   `username` CHAR(100) NOT NULL,
-  PRIMARY KEY (`matricula`),
   UNIQUE KEY `username` (`username`)
   CONSTRAINT `fk_doador` FOREIGN KEY (`cod_doador`) REFERENCES doador(codigo) on delete set null
   foreign key (cod_endereco) references funcionario(codigo) on delete set null
@@ -39,7 +38,6 @@ CREATE TABLE `banco_de_sangue` (
   `codigo` INT(4) PRIMARY KEY,  
   `nome` VARCHAR(50) NOT NULL,
   `capacidade` INT(4) NOT NULL,
-  PRIMARY KEY (`codigo`),
 );
 
 CREATE TABLE `bolsa_de_sangue` (
@@ -48,7 +46,6 @@ CREATE TABLE `bolsa_de_sangue` (
   `data_hora_coleta` DATATIME NOT NULL,
   `tipo_de_doacao` CHAR(20) NOT NULL,
   `data_hora_validade` DATATIME NOT NULL,
-  PRIMARY KEY (`codigo`),
   foreign key (cod_tipo_sanguineo) references tipo_sanguineo(codigo) on delete set null,
   foreign key (cod_tipo_de_hemocomponente) references tipo_de_hemocomponente(codigo) on delete set null
 );
@@ -56,14 +53,12 @@ CREATE TABLE `bolsa_de_sangue` (
 CREATE TABLE `tipo_sanguineo` (
   `codigo` INT(4) PRIMARY KEY,  
   `nome` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`codigo`),
 );
 
 CREATE TABLE `tipo_de_hemocomponente` (
   `codigo` INT(4) PRIMARY KEY,  
   `nome` VARCHAR(100) NOT NULL,
   `descricao` VARCHAR(256) NOT NULL,
-  PRIMARY KEY (`codigo`),
 );
 
 CREATE TABLE `saida` (
@@ -71,5 +66,4 @@ CREATE TABLE `saida` (
   `nome_do_hospital` VARCHAR(100) NOT NULL,
   `nome_do_paciente` VARCHAR(100) NOT NULL,
   `data_hora_de_saida` DATATIME NOT NULL,
-  PRIMARY KEY (`codigo`),
 );
