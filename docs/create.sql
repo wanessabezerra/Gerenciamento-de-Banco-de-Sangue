@@ -77,6 +77,13 @@ CREATE TABLE `doador_bolsa_de_sangue` (
   CONSTRAINT `fk_bolsa_de_sangue` FOREIGN KEY (`cod_bolsa_de_sangue`) REFERENCES bolsa_de_sangue(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
 );
 
+CREATE TABLE `bolsa_de_sangue_banco_de_sangue` (
+  `cod_bolsa_de_sangue` INT NOT NULL,
+  `cod_banco_de_sangue	` INT NOT NULL,
+  CONSTRAINT `fk_bolsa_de_sangue` FOREIGN KEY (`cod_bolsa_de_sangue`) REFERENCES bolsa_de_sangue(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `fk_banco_de_sangue	` FOREIGN KEY (`cod_banco_de_sangue	`) REFERENCES banco_de_sangue	(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT,
+);
+
 CREATE TABLE `saida` (
   `codigo` INT(4) PRIMARY KEY,  
   `nome_do_hospital` VARCHAR(100) NOT NULL,
