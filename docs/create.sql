@@ -1,19 +1,3 @@
-CREATE TABLE doador (
-  codigo INT(4) PRIMARY KEY,  
-  nome VARCHAR(100) NOT NULL,
-  sexo CHAR(1) NOT NULL,
-  tipo_de_sangue CHAR(3) NOT NULL,
-  data_de_nascimento VARCHAR(30) NOT NULL,
-  cod_endereco INT NOT NULL,
-  CONSTRAINT fk_endereco FOREIGN KEY (cod_endereco) REFERENCES endereco(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT
-);
-
-CREATE TABLE telefone(
-  cod_doador INT PRIMARY KEY,
-  numero_fone CHAR(14) NOT NULL,
-  CONSTRAINT fk_doador FOREIGN KEY (cod_doador) REFERENCES doador(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT
-);
-
 CREATE TABLE endereco (
   codigo INT(4) PRIMARY KEY,  
   rua VARCHAR(50) NOT NULL,
@@ -24,13 +8,29 @@ CREATE TABLE endereco (
   cep int(10) NOT NULL
 );
 
+CREATE TABLE doador (
+  codigo INT(4) PRIMARY KEY,  
+  nome VARCHAR(100) NOT NULL,
+  sexo CHAR(1) NOT NULL,
+  tipo_de_sangue CHAR(3) NOT NULL,
+  data_de_nascimento VARCHAR(30) NOT NULL,
+  cod_endereco INT NOT NULL,
+  CONSTRAINT fk_endereco_doador FOREIGN KEY (cod_endereco) REFERENCES endereco(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT
+);
+
+CREATE TABLE telefone(
+  cod_doador INT PRIMARY KEY,
+  numero_fone CHAR(14) NOT NULL,
+  CONSTRAINT fk_doador FOREIGN KEY (cod_doador) REFERENCES doador(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT
+);
+
 CREATE TABLE funcionario (
   codigo INT(4) PRIMARY KEY,  
   nome CHAR(100) NOT NULL,
   email CHAR(256) NOT NULL,
   username CHAR(100) NOT NULL,
   cod_endereco INT NOT NULL,
-  CONSTRAINT fk_endereco FOREIGN KEY (cod_endereco) REFERENCES endereco(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT fk_endereco_funcionario FOREIGN KEY (cod_endereco) REFERENCES endereco(codigo) ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 
 CREATE TABLE banco_de_sangue (
