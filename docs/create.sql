@@ -100,7 +100,7 @@ CREATE TABLE bolsa_de_sangue_banco_de_sangue (
     CONSTRAINT fk_bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT,
-    CONSTRAINT fk_banco_de_sangue	FOREIGN KEY (cod_banco_de_sangue	) 
+    CONSTRAINT fk_banco_de_sangue FOREIGN KEY (cod_banco_de_sangue	) 
         REFERENCES banco_de_sangue(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT
 );
