@@ -124,26 +124,26 @@ CREATE TABLE bolsa_de_sangue_saida (
 );
 
 INSERT INTO endereco(codigo, rua, numero, bairro, cidade, estado, cep)
-	VALUES
-		(0112, "Rua Pedro Velho", 591, "centro", "Caico", "RN", 59300000),
-		(0113, "Av Serido", 380, "centro", "Caico", "RN", 59300000),
-		(0114, "Rua Joel Damasceno", 196, "centro", "Caico", "RN", 59300000),
-		(0115, "Av Josias Miguel", 623, "Nova caicó", "Caico", "RN", 59300000),
-		(0116, "Rua Renato Dantas", 243, "centro", "Caico", "RN", 59300000)
+    VALUES
+	(0112, "Rua Pedro Velho", 591, "centro", "Caico", "RN", 59300000),
+	(0113, "Av Serido", 380, "centro", "Caico", "RN", 59300000),
+	(0114, "Rua Joel Damasceno", 196, "centro", "Caico", "RN", 59300000),
+	(0115, "Av Josias Miguel", 623, "Nova caicó", "Caico", "RN", 59300000),
+	(0116, "Rua Renato Dantas", 243, "centro", "Caico", "RN", 59300000)
 ;
 
 INSERT INTO doador(codigo, nome, sexo, tipo_de_sangue, data_de_nascimento, cod_endereco)
-	VALUES
-		(0212, "Maria", "F", "O+", "1990-05-12", 0112),
-		(0213, "Julia", "F", "O-", "1995-07-10", 0113),
-		(0214, "Matheus", "M", "A+", "1990-04-08", 0114),
-		(0215, "João", "M", "B-", "1994-12-10", 0115),
-		(0216, "Ana", "F", "AB+", "1989-11-27", 0116)
+    VALUES
+	(0212, "Maria", "F", "O+", "1990-05-12", 0112),
+	(0213, "Julia", "F", "O-", "1995-07-10", 0113),
+	(0214, "Matheus", "M", "A+", "1990-04-08", 0114),
+	(0215, "João", "M", "B-", "1994-12-10", 0115),
+	(0216, "Ana", "F", "AB+", "1989-11-27", 0116)
 ;
 
 INSERT INTO telefone(cod_doador, numero_fone)
-	VALUES
-		(0212, "(84)9979-3943"),
+    VALUES
+	(0212, "(84)9979-3943"),
     	(0213, "(84)9834-3753"),
     	(0214, "(84)9987-8863"),
     	(0215, "(84)9836-9876"),
@@ -151,8 +151,8 @@ INSERT INTO telefone(cod_doador, numero_fone)
 ;
 
 INSERT INTO funcionario (codigo, nome, email, username, cod_endereco)
-	VALUES
-   		(0312, "Marcos", "marcos10@hotmail.com", "marcos_10", 0116),
+    VALUES
+   	(0312, "Marcos", "marcos10@hotmail.com", "marcos_10", 0116),
     	(0313, "José", "jose1234@gmail.com", "jose_123", 0114),
     	(0314, "Mariana", "mariana12@outlook.com", "mariana_12", 0113),
     	(0315, "Wanessa","wanessaparelhas@gmail.com", "wanessa_parelhas", 0112),
@@ -160,8 +160,8 @@ INSERT INTO funcionario (codigo, nome, email, username, cod_endereco)
 ;
 
 INSERT INTO banco_de_sangue(codigo, nome, capacidade)
-	VALUES
-   		(0412, "Hemocentro", 6000),
+    VALUES
+   	(0412, "Hemocentro", 6000),
     	(0413, "Hemonorte", 4600),
     	(0414, "Hemosul", 4000),
     	(0415, "Hemoleste", 4400),
@@ -169,8 +169,8 @@ INSERT INTO banco_de_sangue(codigo, nome, capacidade)
 ;
 
 INSERT INTO funcionario_banco_de_sangue (cod_funcionario, cod_banco_de_sangue)
-	VALUES
-   		(0312, 0412),
+    VALUES
+   	(0312, 0412),
     	(0313, 0413),
     	(0314, 0414),
     	(0315, 0415),
@@ -178,19 +178,19 @@ INSERT INTO funcionario_banco_de_sangue (cod_funcionario, cod_banco_de_sangue)
 ;
 
 INSERT INTO tipo_sanguineo(codigo, nome)
-  	VALUES
+    VALUES
     	(0512, "O+"),
     	(0513, "O-"),
-   		(0514, "A+"),
+   	(0514, "A+"),
     	(0515, "A-"),
     	(0516, "B+"),
-	 	(0517, "B-"),
+	(0517, "B-"),
     	(0518, "AB+"),
     	(0519, "AB-")
 ;
 
 INSERT INTO tipo_de_hemocomponente(codigo, nome, descricao)
- 	 VALUES
+    VALUES
     	(0612, "Sangue total fresco", "Anemia hipovolêmica, disfunção hemostática, coagulopatia"),
     	(0613, "Sangue total estocado", "Anemia hipovolêmica"),
     	(0614, "Concentrado de hemácias", "Anemia normovolêmica"),
@@ -200,7 +200,7 @@ INSERT INTO tipo_de_hemocomponente(codigo, nome, descricao)
 ;
 
 INSERT INTO bolsa_de_sangue(codigo, identificacao_da_doacao, data_hora_coleta, tipo_de_doacao, data_hora_validade, cod_tipo_sanguineo, cod_tipo_de_hemocomponente)
-  	VALUES
+    VALUES
     	(0712, 1010, "2021-03-25 08:55:05", "Doação Voluntária", "2022-03-25 08:55:05", 0512, 0612),
     	(0713, 2020, "2021-02-02 09:32:01", "Doação de Reposição", "2022-02-02 09:32:01", 0513, 0613),
     	(0714, 3030, "2021-01-12 15:25:00", "Doação Voluntária", "2021-01-17 15:25:00", 0514, 0615),
@@ -209,7 +209,7 @@ INSERT INTO bolsa_de_sangue(codigo, identificacao_da_doacao, data_hora_coleta, t
 ;
 
 INSERT INTO doador_bolsa_de_sangue(cod_doador, cod_bolsa_de_sangue)
-  	VALUES
+    VALUES
     	(0212, 0712),
     	(0213, 0713),
     	(0214, 0714),
@@ -218,7 +218,7 @@ INSERT INTO doador_bolsa_de_sangue(cod_doador, cod_bolsa_de_sangue)
 ;
 
 INSERT INTO bolsa_de_sangue_banco_de_sangue(cod_bolsa_de_sangue, cod_banco_de_sangue)
-  	VALUES
+    VALUES
     	(0712, 0412),
     	(0713, 0412),
     	(0714, 0412),
@@ -227,7 +227,7 @@ INSERT INTO bolsa_de_sangue_banco_de_sangue(cod_bolsa_de_sangue, cod_banco_de_sa
 ;
 
 INSERT INTO saida(codigo, nome_do_hospital, nome_do_paciente, data_hora_de_saida)
-  	VALUES
+    VALUES
     	(0812, "Hospital Regional", "João Carlos", "2021-03-29 08:55:05"),
     	(0813, "Hospital do Serido", "Matias silva", "2021-04-02 11:25:03"),
     	(0814, "Hospital Thiago Dias", "Ana Maria", "2021-03-07 17:29:00"),
@@ -236,7 +236,7 @@ INSERT INTO saida(codigo, nome_do_hospital, nome_do_paciente, data_hora_de_saida
 ;
 
 INSERT INTO bolsa_de_sangue_saida(cod_bolsa_de_sangue, cod_saida)
-  	VALUES
+    VALUES
     	(0712, 0812),
     	(0713, 0812),
     	(0714, 0813),
