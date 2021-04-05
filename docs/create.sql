@@ -86,10 +86,10 @@ CREATE TABLE bolsa_de_sangue (
 CREATE TABLE doador_bolsa_de_sangue (
     cod_doador INT PRIMARY KEY,
     cod_bolsa_de_sangue INT NOT NULL,
-    CONSTRAINT fk_doador FOREIGN KEY (cod_doador) 
+    CONSTRAINT doador_fk FOREIGN KEY (cod_doador) 
         REFERENCES doador(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT,
-    CONSTRAINT fk_bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
+    CONSTRAINT bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT
 );
@@ -97,10 +97,10 @@ CREATE TABLE doador_bolsa_de_sangue (
 CREATE TABLE bolsa_de_sangue_banco_de_sangue (
     cod_bolsa_de_sangue INT PRIMARY KEY,
     cod_banco_de_sangue	 INT NOT NULL,
-    CONSTRAINT fk_bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
+    CONSTRAINT bolsa_de_sangue_fk FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT,
-    CONSTRAINT fk_banco_de_sangue FOREIGN KEY (cod_banco_de_sangue	) 
+    CONSTRAINT banco_de_sangue_fk FOREIGN KEY (cod_banco_de_sangue	) 
         REFERENCES banco_de_sangue(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT
 );
