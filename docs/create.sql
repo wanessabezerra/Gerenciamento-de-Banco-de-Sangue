@@ -59,9 +59,9 @@ CREATE TABLE funcionario_banco_de_sangue (
 CREATE TABLE bolsa_de_sangue (
     codigo INT(4) PRIMARY KEY,  
     identificacao_da_doacao INT(4) NOT NULL,
-    data_hora_coleta DATATIME NOT NULL,
+    data_hora_coleta DATETIME NOT NULL,
     tipo_de_doacao CHAR(20) NOT NULL,
-    data_hora_validade DATATIME NOT NULL,
+    data_hora_validade DATETIME NOT NULL,
     cod_tipo_sanguineo INT NOT NULL,
     cod_tipo_de_hemocomponente INT NOT NULL,
     CONSTRAINT fk_tipo_sanguineo FOREIGN KEY (cod_tipo_sanguineo) 
