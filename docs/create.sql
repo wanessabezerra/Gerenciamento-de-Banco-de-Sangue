@@ -31,7 +31,7 @@ CREATE TABLE telefone(
 CREATE TABLE funcionario (
     codigo INT(4) PRIMARY KEY,  
     nome CHAR(100) NOT NULL,
-    email CHAR(256) NOT NULL,
+    email CHAR(255) NOT NULL,
     username CHAR(100) NOT NULL,
     cod_endereco INT NOT NULL,
     CONSTRAINT fk_endereco_funcionario FOREIGN KEY (cod_endereco)
@@ -46,7 +46,7 @@ CREATE TABLE banco_de_sangue (
 );
 
 CREATE TABLE funcionario_banco_de_sangue (
-    cod_funcionario INT NOT NULL,
+    cod_funcionario INT PRIMARY KEY,
     cod_banco_de_sangue INT NOT NULL,
     CONSTRAINT fk_funcionario FOREIGN KEY (cod_funcionario)
         REFERENCES funcionario(codigo) 
@@ -54,6 +54,17 @@ CREATE TABLE funcionario_banco_de_sangue (
     CONSTRAINT fk_banco_de_sangue FOREIGN KEY (cod_banco_de_sangue) 
         REFERENCES banco_de_sangue(codigo) 
         ON DELETE RESTRICT ON UPDATE RESTRICT
+);
+
+CREATE TABLE tipo_sanguineo (
+    codigo INT(4) PRIMARY KEY,  
+    nome VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE tipo_de_hemocomponente (
+    codigo INT(4) PRIMARY KEY,  
+    nome VARCHAR(100) NOT NULL,
+    descricao VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE bolsa_de_sangue (
@@ -72,19 +83,8 @@ CREATE TABLE bolsa_de_sangue (
         ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 
-CREATE TABLE tipo_sanguineo (
-    codigo INT(4) PRIMARY KEY,  
-    nome VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE tipo_de_hemocomponente (
-    codigo INT(4) PRIMARY KEY,  
-    nome VARCHAR(100) NOT NULL,
-    descricao VARCHAR(256) NOT NULL
-);
-
 CREATE TABLE doador_bolsa_de_sangue (
-    cod_doador INT NOT NULL,
+    cod_doador INT PRIMARY KEY,
     cod_bolsa_de_sangue INT NOT NULL,
     CONSTRAINT fk_doador FOREIGN KEY (cod_doador) 
         REFERENCES doador(codigo) 
@@ -95,7 +95,7 @@ CREATE TABLE doador_bolsa_de_sangue (
 );
 
 CREATE TABLE bolsa_de_sangue_banco_de_sangue (
-    cod_bolsa_de_sangue INT NOT NULL,
+    cod_bolsa_de_sangue INT PRIMARY KEY,
     cod_banco_de_sangue	 INT NOT NULL,
     CONSTRAINT fk_bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
@@ -113,7 +113,7 @@ CREATE TABLE saida (
 );
 
 CREATE TABLE bolsa_de_sangue_saida (
-    cod_bolsa_de_sangue INT NOT NULL,
+    cod_bolsa_de_sangue INT PRIMARY KEY,
     cod_saida INT NOT NULL,
     CONSTRAINT fk_bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
