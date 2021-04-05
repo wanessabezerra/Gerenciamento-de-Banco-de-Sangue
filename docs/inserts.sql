@@ -91,3 +91,30 @@ INSERT INTO doador_bolsa_de_sangue(cod_doador, cod_bolsa_de_sangue)
     		(0215, 0715),
     		(0216, 0716)
 ;
+
+INSERT INTO bolsa_de_sangue_banco_de_sangue(cod_bolsa_de_sangue, cod_banco_de_sangue)
+  	VALUES
+    		(0712, 0412),
+    		(0713, 0412),
+    		(0714, 0412),
+    		(0715, 0413),
+    		(0716, 0414)
+;
+
+INSERT INTO saida(codigo, nome_do_hospital, nome_do_paciente, data_hora_de_saida)
+  	VALUES
+    		(0812, "Hospital Regional", "João Carlos", "2021-03-29 08:55:05"),
+    		(0813, "Hospital do Serido", "Matias silva", "2021-04-02 11:25:03"),
+    		(0814, "Hospital Thiago Dias", "Ana Maria", "2021-03-07 17:29:00"),
+    		(0815, "Hospital Onofre", "Laura Medeiros", "2021-03-05 15:40:12"),
+    		(0816, "Hospital São Lucas", "Pedro Luiz", "2021-02-14 19:45:15")
+;
+
+INSERT INTO bolsa_de_sangue_saida(cod_bolsa_de_sangue, cod_saida)
+  	VALUES
+    		(0712, 0812),
+    		(0713, 0812),
+    		(0714, 0813),
+    		(0715, 0814),
+    		(0716, 0816)    
+;
