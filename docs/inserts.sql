@@ -33,3 +33,21 @@ INSERT INTO funcionario (codigo, nome, email, username, cod_endereco)
     		(0315, "Wanessa","wanessaparelhas@gmail.com", "wanessa_parelhas", 0112),
     		(0316, "Lucas", "lucas321@gmail.com", "lucas_321", 0115);
 ;
+
+INSERT INTO banco_de_sangue(codigo, nome, capacidade)
+	VALUES
+   		(0412, "Hemocentro", 6000),
+    		(0413, "Hemonorte", 4600),
+    		(0414, "Hemosul", 4000),
+    		(0415, "Hemoleste", 4400),
+    		(0416, "Hemoeste", 4000)
+;
+
+INSERT INTO funcionario_banco_de_sangue (cod_funcionario, cod_banco_de_sangue)
+	VALUES
+   		(0312, 0412),
+    		(0313, 0413),
+    		(0314, 0414),
+    		(0315, 0415),
+    		(0316, 0416)
+;
