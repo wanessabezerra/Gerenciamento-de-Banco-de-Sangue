@@ -109,7 +109,7 @@ CREATE TABLE saida (
     codigo INT(4) PRIMARY KEY,  
     nome_do_hospital VARCHAR(100) NOT NULL,
     nome_do_paciente VARCHAR(100) NOT NULL,
-    data_hora_de_saida DATATIME NOT NULL
+    data_hora_de_saida DATETIME NOT NULL
 );
 
 CREATE TABLE bolsa_de_sangue_saida (
