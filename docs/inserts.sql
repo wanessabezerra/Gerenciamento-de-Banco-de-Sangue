@@ -51,3 +51,25 @@ INSERT INTO funcionario_banco_de_sangue (cod_funcionario, cod_banco_de_sangue)
     		(0315, 0415),
     		(0316, 0416)
 ;
+
+INSERT INTO tipo_sanguineo(codigo, nome)
+  	VALUES
+    		(0512, "O+"),
+    		(0513, "O-"),
+   		(0514, "A+"),
+    		(0515, "A-"),
+    		(0516, "B+"),
+	 	(0517, "B-"),
+    		(0518, "AB+"),
+    		(0519, "AB-")
+;
+
+INSERT INTO tipo_de_hemocomponente(codigo, nome, descricao)
+ 	 VALUES
+    		(0612, "Sangue total fresco", "Anemia hipovolêmica, disfunção hemostática, coagulopatia"),
+    		(0613, "Sangue total estocado", "Anemia hipovolêmica"),
+    		(0614, "Concentrado de hemácias", "Anemia normovolêmica"),
+    		(0615, "Concentrado de plaquetas", "Trombocitopenia"),
+    		(0616, "Plasma Fresco congelado", "Coagulopatia, expansão aguda de volume, hipoproteinemia"),
+    		(0617, "Crioprecipitado", "Hipofibrinogenemia, deficiência de von Willebrand e Hemofilia A")
+;
