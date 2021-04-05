@@ -73,3 +73,21 @@ INSERT INTO tipo_de_hemocomponente(codigo, nome, descricao)
     		(0616, "Plasma Fresco congelado", "Coagulopatia, expansão aguda de volume, hipoproteinemia"),
     		(0617, "Crioprecipitado", "Hipofibrinogenemia, deficiência de von Willebrand e Hemofilia A")
 ;
+
+INSERT INTO bolsa_de_sangue(codigo, identificacao_da_doacao, data_hora_coleta, tipo_de_doacao, data_hora_validade, cod_tipo_sanguineo, cod_tipo_de_hemocomponente)
+  	VALUES
+    		(0712, 1010, "2021-03-25 08:55:05", "Doação Voluntária", "2022-03-25 08:55:05", 0512, 0612),
+    		(0713, 2020, "2021-02-02 09:32:01", "Doação de Reposição", "2022-02-02 09:32:01", 0513, 0613),
+    		(0714, 3030, "2021-01-12 15:25:00", "Doação Voluntária", "2021-01-17 15:25:00", 0514, 0615),
+    		(0715, 4040, "2021-03-05 10:18:45", "Doação de Reposição", "2022-03-05 10:18:45", 0515, 0612),
+    		(0716, 5050, "2021-02-19 16:25:35", "Doação Voluntária", "2021-03-19 16:25:35", 0516, 0616)
+;
+
+INSERT INTO doador_bolsa_de_sangue(cod_doador, cod_bolsa_de_sangue)
+  	VALUES
+    		(0212, 0712),
+    		(0213, 0713),
+    		(0214, 0714),
+    		(0215, 0715),
+    		(0216, 0716)
+;
