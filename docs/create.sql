@@ -17,7 +17,7 @@ CREATE TABLE doador (
     cod_endereco INT NOT NULL,
     CONSTRAINT fk_endereco_doador FOREIGN KEY (cod_endereco)
         REFERENCES endereco(codigo)
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE telefone(
@@ -25,7 +25,7 @@ CREATE TABLE telefone(
     numero_fone CHAR(14) NOT NULL,
     CONSTRAINT fk_doador FOREIGN KEY (cod_doador)
         REFERENCES doador(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE funcionario (
@@ -36,7 +36,7 @@ CREATE TABLE funcionario (
     cod_endereco INT NOT NULL,
     CONSTRAINT fk_endereco_funcionario FOREIGN KEY (cod_endereco)
         REFERENCES endereco(codigo)
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE 
 );
 
 CREATE TABLE banco_de_sangue (
@@ -50,10 +50,10 @@ CREATE TABLE funcionario_banco_de_sangue (
     cod_banco_de_sangue INT NOT NULL,
     CONSTRAINT fk_funcionario FOREIGN KEY (cod_funcionario)
         REFERENCES funcionario(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT,
+        ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_banco_de_sangue FOREIGN KEY (cod_banco_de_sangue) 
         REFERENCES banco_de_sangue(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE tipo_sanguineo (
@@ -77,10 +77,10 @@ CREATE TABLE bolsa_de_sangue (
     cod_tipo_de_hemocomponente INT NOT NULL,
     CONSTRAINT fk_tipo_sanguineo FOREIGN KEY (cod_tipo_sanguineo) 
         REFERENCES tipo_sanguineo(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT,
+        ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_tipo_de_hemocomponente FOREIGN KEY (cod_tipo_de_hemocomponente) 
         REFERENCES tipo_de_hemocomponente(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE doador_bolsa_de_sangue (
@@ -88,10 +88,10 @@ CREATE TABLE doador_bolsa_de_sangue (
     cod_bolsa_de_sangue INT NOT NULL,
     CONSTRAINT doador_fk FOREIGN KEY (cod_doador) 
         REFERENCES doador(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT,
+        ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE bolsa_de_sangue_banco_de_sangue (
@@ -99,10 +99,10 @@ CREATE TABLE bolsa_de_sangue_banco_de_sangue (
     cod_banco_de_sangue	 INT NOT NULL,
     CONSTRAINT bolsa_de_sangue_fk FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT,
+        ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT banco_de_sangue_fk FOREIGN KEY (cod_banco_de_sangue	) 
         REFERENCES banco_de_sangue(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE saida (
@@ -117,10 +117,10 @@ CREATE TABLE bolsa_de_sangue_saida (
     cod_saida INT NOT NULL,
     CONSTRAINT fk_bolsa_de_sangue FOREIGN KEY (cod_bolsa_de_sangue) 
         REFERENCES bolsa_de_sangue(codigo) 
-        ON DELETE RESTRICT ON UPDATE RESTRICT,
+        ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_saida FOREIGN KEY (cod_saida) 
         REFERENCES saida(codigo)
-        ON DELETE RESTRICT ON UPDATE RESTRICT
+        ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 INSERT INTO endereco(codigo, rua, numero, bairro, cidade, estado, cep)
