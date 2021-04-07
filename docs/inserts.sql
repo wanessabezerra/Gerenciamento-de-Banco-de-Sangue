@@ -120,17 +120,18 @@ INSERT INTO bolsa_de_sangue_saida(cod_bolsa_de_sangue, cod_saida)
 ;
 
 SELECT * FROM
-  endereco,
-  doador,
-  telefone,
-  funcionario,
-  banco_de_sangue,
-  funcionario_banco_de_sangue,
-  tipo_sanguineo,
-  tipo_de_hemocomponente,
-  bolsa_de_sangue,
-  doador_bolsa_de_sangue,
-  bolsa_de_sangue_banco_de_sangue,
-  saida,
-  bolsa_de_sangue_saida;
+	endereco,
+	doador,
+	telefone,
+	funcionario,
+	banco_de_sangue,
+	funcionario_banco_de_sangue,
+	tipo_sanguineo,
+	tipo_de_hemocomponente,
+	bolsa_de_sangue,
+	doador_bolsa_de_sangue,
+	bolsa_de_sangue_banco_de_sangue,
+	saida,
+	bolsa_de_sangue_saida
+;
   
